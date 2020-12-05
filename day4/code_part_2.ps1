@@ -8,8 +8,13 @@ Clear-Host
         $key, $value = $_.Groups[1,2].Value
         $hash.Add("$key", $value)
     }
-    $result = 0
+    write-host "---" -NoNewline
+    $hash.keys | sort | %{
+        write-host "$_ : $($hash.$_), " -NoNewline
+    }
     write-host "---"
+    $result = 0
+    
     if($hash.Keys -contains "byr"){
         if ($hash.byr -match '\d{4}'){
             if ($hash.byr -ge 1920 -and $hash.byr -le 2002)
