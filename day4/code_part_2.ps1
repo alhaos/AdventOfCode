@@ -12,7 +12,7 @@ Clear-Host
     write-host "---"
     if($hash.Keys -contains "byr"){
         if ($hash.byr -match '\d{4}'){
-            if ($hash.byr -gt 1920 -and $hash.byr -lt 2002)
+            if ($hash.byr -ge 1920 -and $hash.byr -le 2002)
             {
                 $result++
                 write-host "byr", $hash.byr
@@ -21,7 +21,7 @@ Clear-Host
     }
     if($hash.Keys -contains "iyr"){
         if ($hash.iyr -match '\d{4}'){
-            if ($hash.iyr -gt 2010 -and $hash.iyr -lt 2020)
+            if ($hash.iyr -ge 2010 -and $hash.iyr -le 2020)
             {
                 $result++
                 write-host "iyr", $hash.iyr
@@ -30,7 +30,7 @@ Clear-Host
     }
     if($hash.Keys -contains "eyr"){
         if ($hash.eyr -match '\d{4}'){
-            if ($hash.eyr -gt 2020 -and $hash.eyr -lt 2030)
+            if ($hash.eyr -ge 2020 -and $hash.eyr -le 2030)
             {
                 write-host "eyr", $hash.eyr
                 $result++
@@ -42,13 +42,13 @@ Clear-Host
             $val, $em  = (([regex]"(\d+)((cm|in))").Matches($hash.hgt)).Groups[1,2].value
             switch ($em) {
                 "cm" {
-                    if ($val -gt 150 -and $val -lt 193){
+                    if ($val -ge 150 -and $val -le 193){
                         write-host "hgt", $hash.hgt
                         $result++
                     }
                   }
                 "in" {
-                    if ($val -gt 59 -and $val -lt 76){
+                    if ($val -ge 59 -and $val -le 76){
                         write-host "hgt", $hash.hgt
                         $result++
                     }
