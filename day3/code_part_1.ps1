@@ -29,4 +29,4 @@ function makeGood{
     } | Measure-Object -Sum | ForEach-Object {$_.Sum}
 }
 
-(makeGood 1 1) * (makeGood 3 1) * (makeGood 5 1) * (makeGood 7 1) * (makeGood 1 2)
+(makeGood 3 1)
