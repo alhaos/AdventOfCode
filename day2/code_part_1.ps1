@@ -9,8 +9,7 @@ Get-Content $inputFileName | ForEach-Object {
     $letter = $row[1].TrimEnd(":")
     $letersArray = $row[2]
     #write-host $letersArray, $letter, $firstIndex, $letersArray[$firstIndex-1] $secondIndex, $letersArray[$secondIndex-1]
-    if ($letersArray[$firstIndex-1] -eq $letter -xor $letersArray[$secondIndex-1] -eq $letter)
-    {
+    if ($letersArray[$firstIndex - 1] -eq $letter -xor $letersArray[$secondIndex - 1] -eq $letter) {
         $i++
     }
     

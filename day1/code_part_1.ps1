@@ -4,15 +4,15 @@ param(
 [int[]]$array = @()
 
 Get-Content $inputFileName | ForEach-Object {
-    $array +=, $_
+    $array += , $_
 }
 
 $results = @()
 
-foreach ($i in $array){
-    foreach ($j in $array){
-        if (($i + $j) -eq 2020){
-            $results +=, ($i * $j)
+foreach ($i in $array) {
+    foreach ($j in $array) {
+        if (($i + $j) -eq 2020) {
+            $results += , ($i * $j)
         }
     }
 }
