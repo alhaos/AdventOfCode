@@ -4,12 +4,13 @@ param(
 $i = 0 
 $mainCounter = 0
 (Get-Content $inputFileName -Raw) -split "`r`n`r`n" | ForEach-Object {
-    Write-Host "group: $i"; $i++
+    Write-Host "group: $i {"; $i++
     $j = 0
     $groupAnswers = $_ -split "`r`n"
     $groupAnswers | ForEach-Object{
-        "  answer $j`:  $_" ; $j++
+        Write-Host "  answer       $j`:  $_" ; $j++
     }
+    Write-Host "  char groups   : " -NoNewline
     (([regex]"\w").Matches($_).Value | Group-Object -NoElement | ForEach-Object {
         if ($_.Count -eq $groupAnswers.Count){
             Write-Host -ForegroundColor DarkGreen -NoNewline ("{0}:{1} " -f $_.name, $_.Count)
@@ -19,6 +20,7 @@ $mainCounter = 0
             Write-Host -NoNewline ("{0}:{1} " -f $_.Name, $_.Count)
         }
     }) 
-    Write-Host ""
+    Write-Host "`r`n}"
+
 }
 $mainCounter
