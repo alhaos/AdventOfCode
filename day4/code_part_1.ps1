@@ -1,7 +1,7 @@
 param(
     $inputFileName = "D:\repository\AdventOfCode\day4\input.txt"
 )
-(Get-Content $inputFileName -Raw) -split "`r`n`r`n" | % {
+(Get-Content $inputFileName -Raw) -split "`r`n`r`n" | ForEach-Object {
     $_ -match "byr:" -and 
     $_ -match "iyr:" -and
     $_ -match "eyr:" -and
