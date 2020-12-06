@@ -18,7 +18,7 @@ function displayRep {
         else {
             Write-Host -ForegroundColor DarkGreen $rowList[$_]
         }
-    } | Measure-Object -Sum | %{$_.sum}
+    } | Measure-Object -Sum | ForEach-Object{$_.sum}
 }
 
 (displayRep 1 1) * (displayRep 3 1) * (displayRep 5 1) * (displayRep 7 1) * (displayRep 1 2)
