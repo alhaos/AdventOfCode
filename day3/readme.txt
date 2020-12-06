@@ -68,8 +68,3 @@ What do you get if you multiply together the number of trees encountered on each
 
 Your puzzle answer was 3093068400.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
-
-At this point, you should return to your Advent calendar and try another puzzle.
-
-If you still want to see it, you can get your puzzle input.
