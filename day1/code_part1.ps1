@@ -1,5 +1,5 @@
 [int[]]$array = @()
-Get-Content input.txt | % {
+Get-Content input.txt | ForEach-Object {
     $array +=, $_
 }
 
