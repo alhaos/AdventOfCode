@@ -21,6 +21,5 @@ $mainCounter = 0
         }
     }) 
     Write-Host "`r`n}"
-
 }
 $mainCounter
