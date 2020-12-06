@@ -1,7 +1,3 @@
-Advent of Code[About][Events][Shop][Settings][Log Out]Алексей Семенов 11*
-  0.0.0.0:2020[Calendar][AoC++][Sponsors][Leaderboard][Stats]
-Our sponsors help make Advent of Code possible:
-Educative.io - From CSS to System Design, gain in-demand tech skills at the speed you want. Text-based courses with live coding environments help you learn without the fluff
 --- Day 6: Custom Customs ---
 As your flight approaches the regional airport where you'll switch to a much larger plane, customs declaration forms are distributed to the passengers.
 
@@ -44,8 +40,6 @@ For each group, count the number of questions to which anyone answered "yes". Wh
 
 Your puzzle answer was 6590.
 
-The first half of this puzzle is complete! It provides one gold star: *
-
 --- Part Two ---
 As you finish the last group's customs declaration, you notice that you misread one word in the instructions:
 
@@ -79,6 +73,4 @@ In this example, the sum of these counts is 3 + 0 + 1 + 1 + 1 = 6.
 
 For each group, count the number of questions to which everyone answered "yes". What is the sum of those counts?
 
-Answer: 
- 
-
+Your puzzle answer was 3288.
