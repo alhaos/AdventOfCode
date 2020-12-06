@@ -33,9 +33,9 @@ function Get-SeatNumberByTrace{
     return $rows[0] * 8 + $columns[0]
 }
     
-    Get-Content $inputFileName | % {
+    Get-Content $inputFileName | ForEach-Object {
         Get-SeatNumberByTrace $_
-    } | sort | % {
+    } | Sort-Object | ForEach-Object {
         if ($_ -ne $aa + 1) {$_}
         $aa = $_ 
     }
