@@ -1,5 +1,9 @@
+param(
+    $inputFileName = "D:\repository\AdventOfCode\day1\input.txt"
+)
 [int[]]$array = @()
-Get-Content input.txt | ForEach-Object {
+
+Get-Content $inputFileName | ForEach-Object {
     $array +=, $_
 }
 
