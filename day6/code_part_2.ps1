@@ -22,4 +22,4 @@ $mainCounter = 0
     }) 
     Write-Host "`r`n}"
 }
-$mainCounter
+"The result is: $mainCounter"
