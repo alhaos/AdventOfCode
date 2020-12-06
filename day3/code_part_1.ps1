@@ -7,7 +7,7 @@ function makeGood{
         $stepBottom
     )
     write-host "strart"
-    return (0..($puzzleInput.Count-1)) | % {
+    return (0..($puzzleInput.Count-1)) | ForEach-Object {
         $column = (($_ * $stapsRight) % $mapWidth) / $stepBottom
         if ($_ % $stepBottom -eq 0){
             write-host -ForegroundColor DarkGreen $puzzleInput[$_].Substring(0,$column) -NoNewline
@@ -26,7 +26,7 @@ function makeGood{
         else{
             write-host -ForegroundColor DarkGreen $puzzleInput[$_]
         }
-    } | Measure-Object -Sum | %{$_.Sum}
+    } | Measure-Object -Sum | ForEach-Object {$_.Sum}
 }
 
 (makeGood 1 1) * (makeGood 3 1) * (makeGood 5 1) * (makeGood 7 1) * (makeGood 1 2)
