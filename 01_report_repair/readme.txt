@@ -1,7 +1,3 @@
-Advent of Code[About][Events][Shop][Settings][Log Out]Алексей Семенов 11*
-  0.0.0.0:2020[Calendar][AoC++][Sponsors][Leaderboard][Stats]
-Our sponsors help make Advent of Code possible:
-Educative.io - From CSS to System Design, gain in-demand tech skills at the speed you want. Text-based courses with live coding environments help you learn without the fluff
 --- Day 6: Custom Customs ---
 As your flight approaches the regional airport where you'll switch to a much larger plane, customs declaration forms are distributed to the passengers.
 
